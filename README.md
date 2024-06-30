@@ -35,7 +35,7 @@ git clone https://github.com/SIGSDSscau/DMIN
 
 ## Overview
 In this work, we propose a fresh and effective framework for DiaASQ, which aims to extract Target-Aspect-Opinion-Sentiment quadruples from the given dialogue.
-More details about the task can be found in our [paper](https://arxiv.org/abs/2211.05705).
+More details about the task can be found in the [paper](https://arxiv.org/abs/2211.05705).
 
 <center>
 <img src="./data/fig_model.png" width="50%" />
