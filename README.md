@@ -11,7 +11,7 @@
   <img src="https://img.shields.io/badge/transformers-4.24.0-orange" alt="Build Status">
 </a>
 
-This repository contains data and code for the ACL24 (findings) paper: [DMIN: A Discourse-specific Multi-granularity Integration Network for Conversational Aspect-based Sentiment Quadruple Analysis].
+This repository contains data and code for the ACL24 (findings) paper: [DMIN: A Discourse-specific Multi-granularity Integration Network for Conversational Aspect-based Sentiment Quadruple Analysis](https://aclanthology.org/2024.findings-acl.966/).
 
 ------
 
