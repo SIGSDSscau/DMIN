@@ -24,6 +24,7 @@ git clone https://github.com/SIGSDSscau/DMIN
 ## News 🎉
 
 :loudspeaker: `2024-6-30`: Released the readme.
+
 :zap: `2024-6-30`: Created repository.  
 
 
@@ -78,8 +79,8 @@ then install Spacy and download the model weight:
 
 and you can get the dependency parse data by running the following code:
 ```
-cd /home/shaw/code/DiaASQ/ACL2024_submit/data/dataset/
-python /home/shaw/code/DiaASQ/ACL2024_submit/data/dataset/gen_dep_dataset_by_spacy.py
+cd ./data/dataset/
+python gen_dep_dataset_by_spacy.py
 ```
 
 
