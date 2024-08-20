@@ -70,11 +70,13 @@ prepare data, dependency parse by spacy. You can download it from ```https://dri
 
 OR
 
-install spacy and download the weight of spacy model:
+Download origin dataset from ```https://github.com/unikcc/DiaASQ/tree/master/data/dataset``` to data/dataset;
+
+then install Spacy and download the model weight:
   - 'zh_core_web_trf' for ZH dataset
   - 'en_core_web_trf' for EN dataset
 
-and you can get the dependency parse data by runing the following code:
+and you can get the dependency parse data by running the following code:
 ```
 cd /home/shaw/code/DiaASQ/ACL2024_submit/data/dataset/
 python /home/shaw/code/DiaASQ/ACL2024_submit/data/dataset/gen_dep_dataset_by_spacy.py
