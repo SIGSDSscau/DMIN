@@ -11,3 +11,4 @@ jieba
 tqdm
 transformers
 torch
+# spacy

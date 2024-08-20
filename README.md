@@ -23,19 +23,21 @@ git clone https://github.com/SIGSDSscau/DMIN
 
 ## News 🎉
 
-:loudspeaker: `2024-6-30`: Released the readme.  
+:loudspeaker: `2024-6-30`: Released the readme.
 :zap: `2024-6-30`: Created repository.  
 
 
 ## Quick Links
 - [Overview](#overview)
 - [Requirements](#requirements)
+- [Data Preparation](#data-preparation)
+- [Model Usage](#model-usage)
 - [Citation](#citation)
 
 
 ## Overview
 In this work, we propose a fresh and effective framework for DiaASQ, which aims to extract Target-Aspect-Opinion-Sentiment quadruples from the given dialogue.
-More details about the task can be found in the [paper](https://arxiv.org/abs/2211.05705).
+More details about the task can be found in our [paper](https://arxiv.org/abs/2211.05705).
 
 <center>
 <img src="./data/fig_model.png" width="50%" />
@@ -62,6 +64,28 @@ pip install -r requirements.txt
 | Chinese | 2 |  12GB. |
 | English | 2 | 20GB. |
 
+## TRAIN
+### 1. Get Dataset
+prepare data, dependency parse by spacy. You can download it from ```https://drive.google.com/drive/folders/1OJCOh6lyUny_5PkXq_qEUtHVf46PGqkL?usp=drive_link``` to ```data/dataset```;
+
+OR
+
+install spacy and download the weight of spacy model:
+  - 'zh_core_web_trf' for ZH dataset
+  - 'en_core_web_trf' for EN dataset
+
+and you can get the dependency parse data by runing the following code:
+```
+cd /home/shaw/code/DiaASQ/ACL2024_submit/data/dataset/
+python /home/shaw/code/DiaASQ/ACL2024_submit/data/dataset/gen_dep_dataset_by_spacy.py
+```
+
+
+### 2. Training
+```
+# seed = 41-45
+bash scrip/train.sh
+```
 
 ## Citation
 Our code and datasets are based on [DiaASQ](https://github.com/unikcc/DiaASQ). We appreciate the great help of this work.
