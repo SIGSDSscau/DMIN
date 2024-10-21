@@ -88,7 +88,9 @@ class Main:
             
             eval_losses = np.mean(losses, 0)
             logger.info("EvalLoss (entity:{:.4f}, rel: {:.4f}, pol: {:.4f})".format(*eval_losses))
-
+            
+            for i, data in enumerate(dataiter):
+                continue
             return eval_losses
  
     def evaluate(self, epoch=0, action='eval'):
@@ -201,7 +203,7 @@ class Main:
         # save the result to csv file
         file_path = './result/{}/{}.csv'.format(self.config.lang, self.config.result_file_name)
         with open(file_path, 'a', newline='') as csvfile:
-            fieldnames = [ 'remark', 'avg', 'f1', 'ident', 'ta', 'to', 'ao', 't', 'a', 'o', 'intra', 'inter', 'cross-1', 'cross-ge2', 'cross-ge3', 'val_f1', 'val_ident', 'epoch', 'dropout', 'batch_size',  'logger', 'time']
+            fieldnames = [ 'avg', 'f1', 'ident', 'ta', 'to', 'ao', 't', 'a', 'o', 'intra', 'inter', 'cross-1', 'cross-ge2', 'cross-ge3', 'val_f1', 'val_ident', 'epoch', 'dropout', 'batch_size',  'logger', 'time']
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
             if csvfile.tell() == 0:
                 writer.writeheader()
@@ -216,7 +218,7 @@ class Main:
 
         with open(file_path, 'a', newline='') as csvfile:
             writer = csv.writer(csvfile)
-            writer.writerow([self.config.remark, "{:.4f}".format((self.test_score+self.test_ident)/2*100), 
+            writer.writerow(["{:.4f}".format((self.test_score+self.test_ident)/2*100), 
             "{:.4f}".format(self.test_score*100), "{:.4f}".format(self.test_ident*100),
             ta, to, ao, t, a, o, inter, intra, cross1, cross2, cross3,
                 "{:.4f}".format(self.best_score*100), "{:.4f}".format(self.best_ident*100), self.best_iter, 
