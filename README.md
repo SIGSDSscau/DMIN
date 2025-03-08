@@ -23,6 +23,8 @@ git clone https://github.com/SIGSDSscau/DMIN
 
 ## News 🎉
 
+:loudspeaker: `2025-3-8`: Supplement the version information of the package.
+
 :loudspeaker: `2024-6-30`: Released the readme.
 
 :zap: `2024-6-30`: Created repository.  
@@ -51,6 +53,17 @@ The model is implemented using PyTorch. The versions of the main packages:
 
 + python>=3.7
 + torch>=1.8.1
+
+We achieve the score reported in the paper by the following packages:
++ python                    3.7.9                
++ torch                     1.9.0+cu111 
++ torchaudio                0.9.0      
++ torchvision               0.10.0+cu111  
++ transformers              4.20.1    
++ numpy                     1.21.6
+
+If you are using a different version of the environment, you can try using parameter search to achieve the best score.
+
 
 Install the other required packages:
 ``` bash
